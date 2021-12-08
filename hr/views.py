@@ -18,6 +18,5 @@ def query_test(request):
         if emp_sz.is_valid():
             emp_sz.save()
         return Response(emp_sz.data) 
-    #return Response({'test':1})
 
 
