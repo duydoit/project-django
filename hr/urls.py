@@ -1,6 +1,7 @@
-from django.urls import path, include
+from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path('query/', query_test),
+    path('query/', ApiEmployee.as_view()),path('query/', ApiEmployee.as_view()),
+    path('query-detail/<str:pk>', EmployeeDetail.as_view()),
 ]
