@@ -19,7 +19,7 @@ export default function TableItemEmployee({employee}) {
       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{employee.manager}</td>
       <td className="px-6 py-4 whitespace-nowrap">
         <span className="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
-            {employee.action.name}
+            Active
         </span>
       </td>
       <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
