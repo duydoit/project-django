@@ -23,15 +23,13 @@ class Employee(models.Model):
                       ('divorced', 'Divorced'), ]
     marital = models.CharField(
         max_length=15, choices=MARITAL_CHOICE, default='single')
-    departure_date = models.DateTimeField(
-        name='Departure Date', auto_now=True, auto_now_add=False)
+    departure_date = models.DateTimeField(auto_now=True, auto_now_add=False)
     EMPLOYEE_TYPE_CHOICE = [('employee', 'Employee'),
                             ('student', 'Student'),
                             ('trainee', 'Trainee'),
                             ('contractor', 'Contractor'),
                             ('freelance', 'Freelancer'), ]
-    employee_type = models.CharField(
-        name='Employee Type', max_length=20, choices=EMPLOYEE_TYPE_CHOICE, default='employee')
+    employee_type = models.CharField(max_length=20, choices=EMPLOYEE_TYPE_CHOICE, default='employee')
 
     categorys = models.ManyToManyField(EmployeeCategory, blank=True, null=True)
     department = models.ForeignKey(Department, on_delete=models.CASCADE,blank=True, null=True)
