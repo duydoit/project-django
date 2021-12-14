@@ -1,38 +1,41 @@
 import React from 'react'
-import Nav from './Nav'
-import NavItem from './NavItem'
 
-const Navbar = () => {
+function Navbar() {
     return (
-        <nav className=" bg-indigo-400">
-            <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
-                <div class="relative flex items-center justify-between h-16">
-                    <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                        <div className="flex-shrink-0 flex items-center">
-                            <img class="block lg:hidden h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Workflow"></img>
-                            <img class="hidden lg:block h-8 w-auto" src="https://tailwindui.com/img/logos/workflow-logo-indigo-500-mark-white-text.svg" alt="Workflow"></img>
+        <div className="bg-slate-50 border-b shadow-sm">
+            <div className="sm:container sm:mx-auto">
+                <div className="flex justify-between w-full h-14 px-10 items-center text-slate-500">
+                    <div className=" flex justify-start items-center">
+                        <div className="flex items-center w-40 h-14">
+                            <div className="w-8 h-8 rounded-full bg-cyan-500"></div>
+                            <a className=" text-lg font-medium mx-2">MyApp</a>
                         </div>
-                        <div class="hidden sm:block sm:ml-6">
-                            <Nav>
-                                <NavItem href="/" isActive>Home</NavItem>
-                                <NavItem href="/employee">Employee</NavItem>
-                                <NavItem href="/department">Department</NavItem>
-                            </Nav>
+                        <div className=" hidden md:block">
+                            <div className="flex justify-start w-48 font-medium">
+                                <div className="mx-2">Employee</div>
+                                <div className="mx-2">Department</div>
+                                <div className="mx-2">Satatistic</div>
+                                <div className="mx-2">Timesheet</div>
+                            </div>
                         </div>
                     </div>
-                    <button className="hidden md:block sm:ml-6 font-medium rounded-md text-white bg-indigo-700 hover:bg-indigo-600 px-3 py-2">Login</button>
-                </div>
-                <div class="sm:hidden" id="mobile-menu">
-                    <div class="px-2 pt-2 pb-3 space-y-1">
-                        <ul>
-                            <NavItem href="/" isActive>Home</NavItem>
-                            <NavItem href="/employee">Employee</NavItem>
-                            <NavItem href="/department">Department</NavItem>
-                        </ul>
+                    <div className="flex w-32 justify-between items-center">
+                        <div className="hover:text-sky-400 ">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+                            </svg>
+                        </div>
+                        <div className="hover:text-sky-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <img className="w-8  h-8 rounded-full hover:ring hover:ring-sky-400 ring ring-slate-300" 
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaBd1H8uHoB-7g-o7U57zdPNWr0lICIKDsnA&usqp=CAU/" />
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
     )
 }
 
